@@ -1,0 +1,224 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fine
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: options
+  examples: |
+    - i need to meet a doctor
+    - options
+
+- intent: appointment
+  examples: |
+    - i need to book an appointment
+    - appointment
+
+- intent: insurance
+  examples: |
+    - What insurance do you accept?
+    - insurance
+
+- intent: services
+  examples: |
+    - what are the services you are offering
+    - services
+    - service
+
+- intent: faq
+  examples: |
+    - faq
+    - FAQ
+    - recent questions
+
+- intent: officehours
+  examples: |
+    - office hours
+    - offcie time
+    - open and closing time
+
+- intent: providers
+  examples: |
+    - What can you say about your providers?
+    - providers
+
+- intent: standout
+  examples: |
+    - What makes you unique or stand out?
+    - standout
+
+- intent: info
+  examples: |
+    - I need to view your organization website
+    - website
+    - I need to view your company website
+    - Please provide your organization website link
+
+- intent: restart
+  examples: |
+    - restart the conversation
+    - restart chat
+    - start the conversation again
+    - start again
+
+
+  ##form and email space
+- intent: tell_name
+  examples: |
+    - what is your name?
+    - tell me your name
+    - what others call you
+    - what should i call you?
+
+- intent: my_name
+  examples: |
+    - my name is [ashish]{"entity":"name","value":"ashish"}
+    - my name is [rahul]{"entity":"name","value":"rahul"}
+    - my name is [apneet]{"entity":"name","value":"apneet"}
+    - [ashish]{"entity":"name","value":"ashish"} is my name
+    - [ashish]{"entity":"name","value":"ashish"} this side
+    - people call me [ashish]{"entity":"name","value":"ashish"}
+    - my name is [rabi]{"entity":"name","value":"rabi"}
+    - my name is [dev]{"entity":"name","value":"dev"}
+    - my name is [mano]{"entity":"name","value":"mano"}
+    - my name is [Kaus]{"entity":"name","value":"Kaus"}
+    - my name is [Kaus pathak]{"entity":"name","value":"Kaus pathak"}
+    - my name is [p.k. singh]{"entity":"name","value":"p.k. singh"}
+    - my name is [nishant singh tomar]{"entity":"name","value":"nishant singh tomar"}
+    - [ashish]{"entity":"name","value":"ashish"} is my name
+    - [ashish singh]{"entity":"name","value":"ashish singh"} this side
+    - people call me [pathak]{"entity":"name","value":"pathak"}
+    - people call me [kaustubh pathak]{"entity":"name","value":"kaustubh pathak"}
+    - call me [kaustubh path]{"entity":"name","value":"kaustubh path"}
+    - you can call me [Kaus]{"entity":"name","value":"Kaus"}
+    - sure! my name is [Kaus]{"entity":"name","value":"Kaus"}
+    - Hii i am [praveen]{"entity":"name","value":"praveen"}
+    - Hii i am [kamal hassan]{"entity":"name","value":"kamal hassan"}
+    - Hii i am [supyadeepti singh]{"entity":"name","value":"supyadeepti singh"}
+    - [supyadeepti singh]{"entity":"name","value":"supyadeepti singh"}
+    - [kaus]{"entity":"name","value":"kaus"}
+    - [devashihs kumar singh]{"entity":"name","value":"devashihs kumar singh"}
+    - [abcdefghijklmnopqrstuvwxyz]{"entity":"name","value":"abcdefghijklmnopqrstuvwxyz"}
+
+- intent: mobile_number
+  examples: |
+    - my number is [8209829808]{"entity":"number"}
+    - [8209829808]{"entity":"number"}
+    - [8209829808]{"entity":"number"} is my number
+    - my nobile number is [8209829808]{"entity":"number"}
+    - my number is [8209829808]{"entity":"number"}
+    - [8209829808]{"entity":"number"}
+    - [8209829808]{"entity":"number"} is my number
+    - my nobile number is [8209829808]{"entity":"number"}
+    - call me on [0192345671]{"entity":"number"}
+
+#- intent: play_video
+#  examples: |
+#    - play the mentioned video
+#    - open the url
+#    - open the link in browser
+#    - show me the video that i asked for
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+
+##email space
+- intent: send_email
+  examples: |
+    - I want to to send email
+    - Send an email
+    - Send email
+    - email
+
+

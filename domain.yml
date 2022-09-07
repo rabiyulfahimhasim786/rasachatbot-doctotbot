@@ -1,0 +1,273 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - options
+  - appointment
+  - insurance
+  - services
+  - faq
+  - officehours
+  - providers
+  - standout
+  - info
+  - tell_name
+  - send_email
+  #- play_video
+  - out_of_scope
+  - my_name:
+      use_entities: true
+        - name
+  - mobile_number:
+      use_entities: true
+        - number
+
+
+entities:
+  - name
+  - number
+
+slots:
+  name:
+    type: text
+  number:
+    type: text
+  
+  email:
+    type: text
+  subject:
+    type: text
+  message:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_options_services:
+  - text: "Hi! 👋🏼 
+    My name is Natalie, and I'm your assistant here at Houston Southwest Endodontics. How can I help you today? 
+    Please choose an option below👇🏼
+    These below mentioned services are offering our organizations:"
+    buttons:
+    - title: "I'd like to request an appointment"
+      payload: "/appointment"
+    - title: "What insurance do you accept?"
+      payload: "/insurance"
+    - title: "What services do you offer?"
+      payload: "/services"
+    - title: "FAQ"
+      payload: "/faq"
+
+  utter_appointment:
+  - text: "Great 😁 I'm more than happy to help you with that. I just need to collect a few things from you to get started. It'll only take a second...
+    Would you like to request an appointment?"
+    buttons:
+    - title: "Yes"
+      #payload: "/send_email"
+      payload: "/tell_name"
+    - title: "No"
+      #payload: "/tell_name"
+      payload: "/options"
+
+  utter_insurance:
+  - text: "We accept ALL PPO insurances and will file your insurance claims on your behalf.
+    We are a preferred provider with:
+
+    Aetna
+    Blue Cross Blue Shield
+    Cigna
+    Delta Dental
+    Guardian
+    United Concordia
+    and more...
+    Our amazing staff will work with you to understand your dental insurance policy options and will provide specialized and direct assistance for your insurance provider, allowing you to make an informed decision on what is best for your dental healthcare needs.
+    Would you like to request an appointment?"
+    buttons:
+    - title: "Yes"
+      #payload: "/send_email"
+      payload: "/tell_name"
+    - title: "No"
+      #payload: "/tell_name"
+      payload: "/options"     
+
+  utter_info:
+  - text: "Here is the link to our [website](https://www.desss.com/) click here to redirect to our website. Also, please choose a contact forms"
+    buttons:
+    - title: "Email"
+      #payload: "/send_email"
+      payload: "/send_email"
+    - title: "Form"
+      #payload: "/tell_name"
+      payload: "/tell_name"
+
+  utter_services:
+  - text: "Here are some of the services we offer:
+
+    Root Canal Treatment
+    Root Canal Retreatment
+    Apicoectomy
+    Minimally Invasive Laser Treatment
+    Digital X-rays
+    3D/CBCT Radiography
+    Endodontic Microscope
+    Traumatic Injuries
+    Cracked Teeth
+    Second Opinions
+    
+    Please request an appointment with us and when we call to confirm your appointment, we will be happy to answer all the questions you have about our services. 😉
+
+    Would you like to request an appointment?"
+    buttons:
+    - title: "Yes"
+      #payload: "/send_email"
+      payload: "/tell_name"
+    - title: "No"
+      #payload: "/tell_name"
+      payload: "/options"   
+
+  utter_faq:
+  - text: "Here are the questions we get asked most often by new and long-time patients!"
+    buttons:
+    - title: "When are you open?"
+      #payload: "/send_email"
+      payload: "/officehours"
+    - title: "What can you say about your providers?"
+      #payload: "/tell_name"
+      payload: "/providers"
+    - title: "What makes you unique or stand out?"
+      #payload: "/tell_name"
+      payload: "/standout"
+
+
+  utter_office_hours:
+  - text: "These are our office hours 🕒:
+
+    Monday, Tuesday & Thursday
+
+    9:00 am - 6:00 pm
+
+    Saturday
+
+    9:00 am - 2:00 pm
+
+    Would you like to request an appointment?"
+    buttons:
+    - title: "Yes"
+      #payload: "/send_email"
+      payload: "/tell_name"
+    - title: "No"
+      #payload: "/tell_name"
+      payload: "/options"
+      
+  utter_providers:
+  - text: "Dr. Jillwen Sung received her DMD dental degree at Harvard University and went on to complete her endodontic residency at New York University. She has been in private endodontic practice for more than 15 years. 
+
+    She truly believes that dentistry is a helping profession and believes in helping her patients to understand if they even need a root canal treatment, or if their pain originates from something else, and helping her patients to think about what option is best for them.
+
+    Would you like to request an appointment?"
+    buttons:
+    - title: "Yes"
+      #payload: "/send_email"
+      payload: "/tell_name"
+    - title: "No"
+      #payload: "/tell_name"
+      payload: "/options"
+
+  utter_standout:
+  - text: "Houston Southwest Endodontics works hard to make you feel at ease by providing exceptional patient care in a relaxed, convenient atmosphere. They strive to develop lifelong relationships with our patients by combining the latest root canal technology with a professional and compassionate staff.
+
+    Would you like to request an appointment?"
+    buttons:
+    - title: "Yes"
+      #payload: "/send_email"
+      payload: "/tell_name"
+    - title: "No"
+      #payload: "/tell_name"
+      payload: "/options"
+  
+  # name
+
+  utter_name:
+  - text: My name is Desss Chatbot.
+
+  utter_ask_name:
+  - text: What is your name?
+
+  utter_ask_number:
+  - text: What is your mobile number?
+
+  utter_thanks:
+  - text: Thanks for providing the values.
+
+  # email
+  utter_out_of_scope:
+  - text: Sorry, I didn't get what you said. Please rephrase what you said.
+  
+  utter_ask_email:
+    - text: Please provide the email ID whom you want to an email.
+
+  utter_ask_subject:
+    - text: Please provide the subject for your email.
+
+  utter_ask_message:
+    - text: Please provide the message for your email.
+
+  utter_details_thanks:
+  - text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number},\nStatus: {If_Inserted} . 
+  Would you like to return main menu or close this sesssion please select options below"
+    buttons:
+    - title: "Yes"
+      #payload: "/send_email"
+      payload: "/options"
+    - title: "No"
+      #payload: "/tell_name"
+      payload: "/goodbye"
+
+actions:
+- action_restart
+- action_submit
+- action_email
+
+forms:
+  user_details_form:
+    name:
+      - type: from_entity
+        entity: name
+    number:
+      - type: from_entity
+        entity: number
+
+  email_form:
+    email:
+    - type: from_text
+    subject:
+    - type: from_text
+    message:
+    - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
